@@ -38,6 +38,7 @@ userSchema.pre("save", async function(next) {
     next();
 });
 
+//Tells the MongoDB that the Schema is a Model
 const User = mongoose.model<UserType>("User", userSchema);
 
 export default User;
