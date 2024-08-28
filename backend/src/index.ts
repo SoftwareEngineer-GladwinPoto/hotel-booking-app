@@ -1,5 +1,5 @@
 import express from 'express';
-import cors from 'cors';
+import cors from "cors";
 import "dotenv/config";
 import mongoose from 'mongoose';
 import userRoutes from './routes/users';
@@ -30,6 +30,8 @@ app.use(
     credentials: true,
    })
 );
+
+
 
 app.use(express.static(path.join(__dirname, "../../frontend/dist")));
 
