@@ -41,6 +41,7 @@ app.use("/api/my-hotels", myHotelRoutes);
 
 app.get("*", (req: Request, res: Response)=>{
     res.sendFile(path.join(__dirname, "../../frontend/dist/index.html"));
+    res.setHeader("Access-Control-Allow-Origin", "*");
 })
 
 app.listen(5000, () => {
