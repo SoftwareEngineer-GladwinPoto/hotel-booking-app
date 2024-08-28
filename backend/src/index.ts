@@ -40,10 +40,10 @@ app.use("/api/users", userRoutes);
 app.use("/api/my-hotels", myHotelRoutes);
 
 app.use((req: Request, res: Response)=>{
-    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-origin", "*");
     res.header(
         "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
+        "origin, X-Requested-With, Content-Type, Accept"
     );
 });
 
