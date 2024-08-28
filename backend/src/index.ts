@@ -39,10 +39,17 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/my-hotels", myHotelRoutes);
 
+app.use((req: Request, res: Response)=>{
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
+});
+
 app.get("*", (req: Request, res: Response)=>{
     res.sendFile(path.join(__dirname, "../../frontend/dist/index.html"));
-    res.setHeader("Access-Control-Allow-Origin", "*");
-})
+});
 
 app.listen(5000, () => {
     console.log("Server is running on the localhost: 5000");
