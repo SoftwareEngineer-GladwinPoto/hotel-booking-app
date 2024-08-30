@@ -41,7 +41,7 @@ app.use("/api/my-hotels", myHotelRoutes);
 
 
 
-app.get("FRONTEND_URL", (req: Request, res: Response)=>{
+app.get("*", (req: Request, res: Response)=>{
     res.sendFile(path.join(__dirname, "../../frontend/dist/index.html"));
 });
 
