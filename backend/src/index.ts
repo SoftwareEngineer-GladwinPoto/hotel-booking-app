@@ -26,12 +26,10 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}));
 app.use(
     cors({
-    origin: process.env.http,//localhost:5173
+    origin: process.env.FRONTEND_URL,
     credentials: true,
    })
 );
-
-
 
 app.use(express.static(path.join(__dirname, "../../frontend/dist")));
 
