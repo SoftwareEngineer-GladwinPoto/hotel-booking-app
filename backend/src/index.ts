@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string);
 const app = express();
 app.use(cookieParser());
 app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({extended: true}));
 app.use(
     cors({
     origin: process.env.FRONTEND_URL,
@@ -39,15 +39,9 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/my-hotels", myHotelRoutes);
 
-app.use((req: Request, res: Response)=>{
-    res.setHeader("Access-Control-Allow-origin", "*");
-    res.header(
-        "Access-Control-Allow-Headers",
-        "origin, X-Requested-With, Content-Type, Accept"
-    );
-});
 
-app.get("*", (req: Request, res: Response)=>{
+
+app.get("FRONTEND_URL", (req: Request, res: Response)=>{
     res.sendFile(path.join(__dirname, "../../frontend/dist/index.html"));
 });
 
