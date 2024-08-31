@@ -1,10 +1,10 @@
 import { RegisterFormData } from "./pages/Register";
 import { SignInFormData } from "./pages/SignIn";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
+import.meta.env.VITE_API_BASE_URL || "";
 
 export const register = async (formData: RegisterFormData) => {
-    const response = await fetch( `${API_BASE_URL}/api/users/register`, {
+    const response = await fetch( "http://localhost:5000/api/users/register", {
         method: "POST",
         credentials: "include",
     
