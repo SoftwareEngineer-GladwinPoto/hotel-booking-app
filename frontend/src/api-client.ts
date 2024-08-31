@@ -6,7 +6,7 @@ import.meta.env.VITE_API_BASE_URL || "";
 export const register = async (formData: RegisterFormData) => {
     const response = await fetch( "http://localhost:5000/api/users/register", {
         method: "POST",
-        credentials: "include",
+        
     
         headers: {
             "Content-Type": "application/json",
@@ -26,7 +26,7 @@ export const register = async (formData: RegisterFormData) => {
 export const signIn =  async (formData: SignInFormData) => {
     const response = await fetch ("http://localhost:5000/api/auth/login",{
         method: "POST",
-        credentials: "include",
+       
         headers: {
             "Content-Type": "application/json",
            
@@ -43,7 +43,7 @@ export const signIn =  async (formData: SignInFormData) => {
 
 export const validateToken = async () => {
     const response = await fetch("http://localhost:5000/api/auth/validate-token", {
-        credentials: "include"
+        
     })
 
     if(!response.ok){
@@ -54,7 +54,7 @@ export const validateToken = async () => {
 
 export const signOut = async ()=>{
     const response = await fetch("http://localhost:5000/api/auth/logout", {
-        credentials: "include",
+        
         method: "POST"
     });
     if(!response.ok){
@@ -64,7 +64,7 @@ export const signOut = async ()=>{
 
 export const addMyHotel = async (hotelFormData: FormData)=>{
     const response = await fetch("http://localhost:5000/api/my-hotels",{
-        credentials: "include",
+       
         body: hotelFormData,
         method: "POST"
     });
