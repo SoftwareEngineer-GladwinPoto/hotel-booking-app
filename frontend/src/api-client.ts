@@ -28,7 +28,8 @@ export const signIn =  async (formData: SignInFormData) => {
         method: "POST",
         credentials: "include",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
         },
         body: JSON.stringify(formData),
     });
