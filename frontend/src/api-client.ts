@@ -66,7 +66,7 @@ export const signOut = async ()=>{
 
 export const addMyHotel = async (hotelFormData: FormData)=>{
     const response = await fetch("http://localhost:5000/api/my-hotels",{
-       credentials: "include",
+        credentials: "include",
         body: hotelFormData,
         method: "POST"
     });
