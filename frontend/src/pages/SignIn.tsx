@@ -25,7 +25,7 @@ const SignIn = () => {
             //1. show the toast
             //2. navigate to the home page
             showToast({message: "Sign in successful", type: "SUCCESS"});
-            await queryClient.invalidateQueries("validate-token");
+            await queryClient.invalidateQueries("validateToken");
             navigate("/");
 
 
