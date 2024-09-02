@@ -10,6 +10,7 @@ export const register = async (formData: RegisterFormData) => {
         
     
         headers: {
+            "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
@@ -30,6 +31,7 @@ export const signIn =  async (formData: SignInFormData) => {
         credentials: "include",
        
         headers: {
+            "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json",
            
         },
@@ -45,7 +47,11 @@ export const signIn =  async (formData: SignInFormData) => {
 
 export const validateToken = async () => {
     const response = await fetch("http://localhost:5000/api/auth/validate-token", {
-    credentials: "include",    
+    credentials: "include",  
+    
+         headers: {
+            "Access-Control-Allow-Origin": "*",
+         }
     })
 
     if(!response.ok){
@@ -57,7 +63,11 @@ export const validateToken = async () => {
 export const signOut = async ()=>{
     const response = await fetch("http://localhost:5000/api/auth/logout", {
         credentials: "include",
-        method: "POST"
+        method: "POST",
+
+         headers: {
+            "Access-Control-Allow-Origin": "*",
+         }
     });
     if(!response.ok){
         throw new Error("Error during sign out");
@@ -68,7 +78,11 @@ export const addMyHotel = async (hotelFormData: FormData)=>{
     const response = await fetch("http://localhost:5000/api/my-hotels",{
         credentials: "include",
         body: hotelFormData,
-        method: "POST"
+        method: "POST",
+
+        headers: {
+            "Access-Control-Allow-Origin": "*",  
+        }
     });
     if(!response.ok){
         throw new Error("Error during adding hotels")
