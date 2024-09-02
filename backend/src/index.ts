@@ -29,6 +29,7 @@ app.use(
     
       origin: process.env.RENDER,
       credentials: true,
+      
 
    })
 );
