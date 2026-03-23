@@ -1,6 +1,6 @@
-## Hotel Booking Web Application (Working in Progress)
- ### Work in Progress: Core features like hotel listings, booking, and user authentication are implemented. Additional features, UI improvements,and deployment will be added soon.This is a personal full-stack project built using the MERN stack (MongoDB, Express.js, React, Node.js). It allows users to browse hotels, check availability, and make bookings, demonstrating my skills in real-world application development.
-## Tech Stack 
+### Hotel Booking Web Application (Working in Progress)
+ #### Work in Progress: Core features like hotel listings, booking, and user authentication are implemented. Additional features, UI improvements,and deployment will be added soon.This is a personal full-stack project built using the MERN stack (MongoDB, Express.js, React, Node.js). It allows users to browse hotels, check availability, and make bookings, demonstrating my skills in real-world application development.
+### Tech Stack 
   * MongoDB - database for storing hotels, users, and bookings
   * Express.js - backend framework for building RESTful APIs
   * React - frontend library for building the user interface
@@ -8,7 +8,7 @@
   * Cloudinary - cloud storage for hotel images
   * Stripe - payment integraton (planned feature)
   * JWT - user authentication and session management
-## Features
+### Features
  #### Currently implemented features:
    * Browse Hotels: View a list of hotels with basic details and images
    * Hotel Details: See detailed information about each hotel
@@ -16,7 +16,7 @@
    * User Authentication: Register, log in, and manage your account
    * Responsive UI: Works on desktop and mobile devices
 
-### Work in Progress: More features, including payment integration, admin panel, and UI enchancements, are planned for future updates
+#### Work in Progress: More features, including payment integration, admin panel, and UI enchancements, are planned for future updates
 
 
 ### Setup / Installation
@@ -47,8 +47,4 @@
  * Expand automated text coverage
 
 ### About Me
- #### This project is part of my personal journey as a self-taught full stack engineer, building on my C++ foundation from my BSc in Applied Mathematics and Computer Science degree at University of South Africa.It demonstrates my ability to:
-  ** Apply programming concepts to real-world problems
-  ** Design and implement full-stack web applications
-  ** Continuosly learn and adapt new technologies
- #### I am passionate about creating practical software solutions and improving this project further to make it fully functional, user-friendly,and deployable.
+ #### This project is part of my personal journey as a self-taught full stack engineer, building on my C++ foundation from my BSc in Applied Mathematics and Computer Science degree at University of South Africa.It demonstrates my ability to apply programming concepts to real-world problems, Design and implement full-stack web applications, Continuosly learn and adapt new technologies. I am passionate about creating practical software solutions and improving this project further to make it fully functional, user-friendly,and deployable.
